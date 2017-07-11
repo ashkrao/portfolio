@@ -1,0 +1,27 @@
+
+.nav-main li {
+  margin-right: .6em;
+  font-size: 1.8em;
+  padding: .7em .2em;
+  border-bottom: 2px solid #EEE;
+}
+
+@media (min-width:700px) {
+   nav .icon-menu {
+     display:none;
+   }
+   .nav-main ul {
+     display:block;
+   }
+   .nav-main li {
+     display:inline;
+     padding: 0 5%;
+     border-bottom: none;
+   }
+ }
+ .icon-home {
+ 	content: "\e908";
+ }
+ .icon-menu {
+ 	content: "\e902";
+ }
