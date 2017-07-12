@@ -1,9 +1,9 @@
 
 .nav-main li {
   margin-right: .6em;
-  font-size: 1.8em;
-  padding: .7em .2em;
-  border-bottom: 2px solid #EEE;
+  font-size: 1 em;
+  padding: .9em .5em;
+  border-bottom: 1px solid #EEE;
 }
 
 @media (min-width:700px) {
@@ -30,30 +30,45 @@
   font-weight: normal;
   font-style: normal;
 }
+#name {
+  font-family: 'Lobster Two', cursive;
+  font-size: 30px;
+  padding-bottom: 10px;
+  }
 
-.icon-home:before {
-  font-family: 'icomoon' !important;
-  content: "\e900";
-}
+#bio {
+  font-family: 'Lobster Two', cursive;
+  font-size: 15px;
+  padding-bottom: 20px;
+  }
 
 .icon-menu:before {
   font-family: 'icomoon' !important;
   content: "\e9bd";
   float: right;
   font-size: 30px;
+  }
+
+.icon-home:before {
+  font-family: 'icomoon' !important;
+  content: "\e900";
+  font-size: 1 em;
 }
 
 .icon-address-book:before {
   font-family: 'icomoon' !important;
   content: "\e971";
+  font-size: 1 em;
 }
 
 .icon-twitter3:before {
   font-family: 'icomoon' !important;
   content: "\ea96";
+  font-size: 1 em;
 }
 
 .icon-github:before {
   font-family: 'icomoon' !important;
   content: "\eab0";
+  font-size: 1 em;
 }
