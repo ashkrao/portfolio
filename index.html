@@ -3,46 +3,45 @@
   <head>
     <meta charset="utf-8">
     <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet">
     <link rel="stylesheet" href="css/cssreset.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="">
       <section class="">
-        <h1>Hi, I'm Ashwini!</h1>
-        <h4>Apprentice at Microsoft</h4>
+        <h1 id="name">Hi, I'm Ashwini!</h1>
+        <h4 id="bio">Apprentice at Microsoft</h4>
       </section>
       <nav class="nav-main">
       <div class="icon-menu"></div>
       <ul>
         <li class="tab" data-content="articles"><a href="#" target="_blank" class="icon-home"> Home</a></li>
         <li class="tab" data-content="about"><a href="https://ashkrao.github.io/about_me/" target="_blank" class="icon-address-book"> About</a></li>
-        <li><a href="http://twitter.com/ashkrao" target="_blank" class="icon-twitter3"> Twitter</a></li>
-        <li><a href="http://github.com/ashkrao" target="_blank" class="icon-github"> GitHub</a></li>
+        <li class="tab" data-content="twitter"><a href="http://twitter.com/ashkrao" target="_blank" class="icon-twitter3"> Twitter</a></li>
+        <li class="tab" data-content="github"><a href="http://github.com/ashkrao" target="_blank" class="icon-github"> GitHub</a></li>
       </ul>
     </nav>
   </header>
     <main>
-        <article class="">
+        <article class="template" data-category="project">
           <header>
             <h2></h2>
           </header>
+          <div class="duration">
+
+          </div>
+          <div class="description">
+
+          </div>
+          <div class="technologies-used">
+
+          </div>
         </article>
-      <section id="">
-        <article class="">
-          <header>
-            <h2></h2>
-          </header>
-        </article>
-      </section>
-      <section id="">
-        <article class="">
-          <header>
-            <h2></h2>
-          </header>
-        </article>
-      </section>
     </main>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/projectData.js"></script>
+    <script type="text/javascript" src="js/project.js"></script>
   </body>
 </html>
