@@ -14,7 +14,7 @@ Project.prototype.toHtml = function() {
   var $newProject = $('article.template').clone();
   $newProject.removeClass('template');
 
-  $newProject.data('category', this.category);
+  $newProject.attr('data-category', this.category);
 
   $newProject.find('h2').html(this.title);
   $newProject.find('.duration').html(this.duration);
@@ -31,5 +31,5 @@ rawData.forEach(function(projObject) {
 });
 
 projects.forEach(function(proj) {
-  $('main').append(proj.toHtml());
+  $('#articles').append(proj.toHtml());
 });
