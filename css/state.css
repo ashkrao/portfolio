@@ -1,0 +1,14 @@
+/* Navigation for larger screens */
+@media (min-width:700px) {
+  nav .icon-menu {
+     display:none;
+  }
+  .nav-main ul {
+     display:block;
+  }
+  .nav-main li {
+     display:inline;
+     padding: 0 5%;
+     border-bottom: none;
+  }
+}

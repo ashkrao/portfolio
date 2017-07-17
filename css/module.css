@@ -1,0 +1,21 @@
+/* Navigation */
+
+.nav-main li {
+  margin-right: .6em;
+  font-size: 1 em;
+  padding: .9em .5em;
+  border-bottom: 1px solid #EEE;
+}
+
+/* Header */
+#name {
+  font-family: 'Lobster Two', cursive;
+  font-size: 30px;
+  padding-bottom: 10px;
+  }
+
+#bio {
+  font-family: 'Lobster Two', cursive;
+  font-size: 15px;
+  padding-bottom: 20px;
+  }

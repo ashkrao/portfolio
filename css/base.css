@@ -1,25 +1,3 @@
-
-.nav-main li {
-  margin-right: .6em;
-  font-size: 1 em;
-  padding: .9em .5em;
-  border-bottom: 1px solid #EEE;
-}
-
-@media (min-width:700px) {
-  nav .icon-menu {
-     display:none;
-  }
-  .nav-main ul {
-     display:block;
-  }
-  .nav-main li {
-     display:inline;
-     padding: 0 5%;
-     border-bottom: none;
-  }
-}
-
 @font-face {
   font-family: 'icomoon';
   src:  url('../fonts/icomoon.eot');
@@ -30,17 +8,6 @@
   font-weight: normal;
   font-style: normal;
 }
-#name {
-  font-family: 'Lobster Two', cursive;
-  font-size: 30px;
-  padding-bottom: 10px;
-  }
-
-#bio {
-  font-family: 'Lobster Two', cursive;
-  font-size: 15px;
-  padding-bottom: 20px;
-  }
 
 .icon-menu:before {
   font-family: 'icomoon' !important;

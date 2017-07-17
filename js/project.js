@@ -10,26 +10,19 @@ function Project (rawDataObj) {
   this.technologies = rawDataObj.technologies;
 }
 
-Project.prototype.toHtml = function() {
-  var $newProject = $('article.template').clone();
-  $newProject.removeClass('template');
-
-  $newProject.attr('data-category', this.category);
-
-  $newProject.find('h2').html(this.title);
-  $newProject.find('.duration').html(this.duration);
-  $newProject.find('.description').html(this.description);
-  $newProject.find('.technologies-used').html(this.technologies);
-
-  // Add a horizontal line at the end
-  $newProject.append('<hr>');
-  return $newProject;
-};
+function handlebarRenderTemplate(){
+  rawData.forEach(function(object){
+    var $templateStr = $('#handlebarsTemplate').html();
+    var compiled = Handlebars.compile($templateStr);
+    var html = compiled(object);
+    $('#articles').append(html);
+  })
+}
 
 rawData.forEach(function(projObject) {
   projects.push(new Project(projObject));
 });
 
-projects.forEach(function(proj) {
-  $('#articles').append(proj.toHtml());
-});
+$(document).ready(function(){
+  handlebarRenderTemplate();
+})
