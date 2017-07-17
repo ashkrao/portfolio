@@ -10,6 +10,15 @@ function Project (rawDataObj) {
   this.technologies = rawDataObj.technologies;
 }
 
+function HandlebarRenderTemplate(){
+  rawData.forEach(function(object){
+    var $templateStr = $('#handlebarsTemplate').html();
+    var compiled = Handlebars.compile($templateStr);
+    var html = compiled(object);
+    $('#articles').append(html);
+  })
+}
+
 Project.prototype.toHtml = function() {
   var $newProject = $('article.template').clone();
   $newProject.removeClass('template');
@@ -31,5 +40,9 @@ rawData.forEach(function(projObject) {
 });
 
 projects.forEach(function(proj) {
-  $('#articles').append(proj.toHtml());
+  // $('#articles').append(proj.toHtml());
 });
+
+$(document).ready(function(){
+  HandlebarRenderTemplate();
+})
