@@ -1,2 +1,5 @@
 # Unnecessary MacOS files
 .DS_Store
+
+# Node Dependency directories
+node_modules
