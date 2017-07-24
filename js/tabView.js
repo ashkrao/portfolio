@@ -2,6 +2,12 @@
 
 var tabView = {};
 
+tabView.initIndexPage = function() {
+  Project.all.forEach(function(article) {
+    $('#articles').append(article.toHtml())
+  });
+}
+
 tabView.handleTabs = function() {
   $('.tab').on('click', function() {
     var tabId = $(this).attr('data-content');

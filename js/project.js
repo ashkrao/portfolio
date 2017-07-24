@@ -1,7 +1,5 @@
 'use strict';
 
-var projects = [];
-
 function Project (rawDataObj) {
   this.title = rawDataObj.title;
   this.category = rawDataObj.category;
@@ -10,19 +8,30 @@ function Project (rawDataObj) {
   this.technologies = rawDataObj.technologies;
 }
 
-function handlebarRenderTemplate(){
-  rawData.forEach(function(object){
-    var $templateStr = $('#handlebarsTemplate').html();
-    var compiled = Handlebars.compile($templateStr);
-    var html = compiled(object);
-    $('#articles').append(html);
+Project.all = [];
+
+Project.prototype.toHtml = function() {
+  var $templateStr = $('#handlebarsTemplate').html();
+  var compiled = Handlebars.compile($templateStr);
+  var html = compiled(this);
+  return html;
+}
+
+Project.loadAll = function(rawData) {
+  rawData.forEach(function(projObject) {
+    Project.all.push(new Project(projObject));
   })
 }
 
-rawData.forEach(function(projObject) {
-  projects.push(new Project(projObject));
-});
-
-$(document).ready(function(){
-  handlebarRenderTemplate();
-})
+Project.fetchAll = function() {
+  if (localStorage.rawData) {
+    Project.loadAll(JSON.parse(localStorage.rawData));
+    tabView.initIndexPage();
+  } else {
+    $.getJSON('./js/projectData.json').then(
+      function(data) {
+        localStorage.rawData = JSON.stringify(data);
+        Project.fetchAll();},
+      function(){console.error('File not found');})
+  }
+}
