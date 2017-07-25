@@ -3,9 +3,7 @@
 var tabView = {};
 
 tabView.initIndexPage = function() {
-  Project.all.forEach(function(article) {
-    $('#articles').append(article.toHtml())
-  });
+  Project.all.map(article => $('#articles').append(article.toHtml()));
 }
 
 tabView.handleTabs = function() {
@@ -23,4 +21,4 @@ tabView.showTab = function(tabId) {
 $(document).ready(function() {
   tabView.handleTabs();
   tabView.showTab('articles');
-})
+});
