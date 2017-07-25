@@ -23,4 +23,4 @@ tabView.showTab = function(tabId) {
 $(document).ready(function() {
   tabView.handleTabs();
   tabView.showTab('articles');
-})
+});
