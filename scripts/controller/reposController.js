@@ -11,3 +11,5 @@ var app = app || {};
     $('#github').show();
   }
 })(app);
+
+//Reference: Demo class 12

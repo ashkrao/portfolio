@@ -8,3 +8,5 @@ var app = app || {};
     $('#repoList').html(template({repos: reposFromModel}))
   }
 })(app);
+
+//Reference: Demo class 12

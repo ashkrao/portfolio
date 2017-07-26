@@ -8,3 +8,5 @@ var app = app || {};
     $('#about').show();
   }
 })(app);
+
+//Reference: Demo class 12.
