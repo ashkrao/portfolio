@@ -1,10 +1,9 @@
 # Unnecessary MacOS files
 .DS_Store
-<<<<<<< Updated upstream
 
 # Node Dependency directories
 node_modules
-=======
-node_modules
 node_modules/*
->>>>>>> Stashed changes
+
+# GitHub token
+githubToken.js

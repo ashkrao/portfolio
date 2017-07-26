@@ -26,6 +26,14 @@
         <hr/>
       </article>
     </script>
+    <script type="text/x-handlebars-template" id="repoTemplate">
+      {{#each repos}}
+        <li>
+          <h4>{{this.name}}</h4>
+          <a href="{{this.url}}">{{this.url}}</a>
+        </li>
+      {{/each}}
+    </script>
   </head>
   <body>
     <header class="">
@@ -53,17 +61,19 @@
         Twitter :|
       </section>
       <section id="github" class="tab-content">
-        GitHub >:D
+        <h2>GitHub Repos Page</h2>
+        <ul id="repoList"></ul>
       </section>
-
     </main>
     <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
-    <script type="text/javascript" src="js/model/project.js"></script>
-    <script type="text/javascript" src="js/view/tabView.js"></script>
+    <script type="text/javascript" src="githubToken.js"></script>
+    <script type="text/javascript" src="scripts/model/repo.js"></script>
+    <script type="text/javascript" src="scripts/model/project.js"></script>
+    <script type="text/javascript" src="scripts/view/tabView.js"></script>
     <script src="/scripts/controller/homeController.js"></script>
     <script src="/scripts/controller/aboutController.js"></script>
-    <script type="text/javascript" src="js/projectData.js"></script>
+    <script src="/scripts/controller/reposController.js"></script>
   </body>
 </html>
