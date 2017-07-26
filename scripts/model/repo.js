@@ -2,8 +2,8 @@
 
 var app = app || {};
 
-(function(module) {
-  module.requestRepos = function(callback) {
+(function (module) {
+  module.requestRepos = function (callback) {
     $.ajax({
       url: 'https://api.github.com/user/repos',
       method: 'GET',
@@ -12,13 +12,14 @@ var app = app || {};
       }
     })
     .then(
-      function(data){
-        var mappedData = data.map(repo =>({
+      function (data){
+        let mappedData = data.map(repo =>({
           name: repo.name,
           url: repo.html_url
         }));
         console.log(mappedData);
         callback(mappedData);
-      })
+      }
+    );
   };
 })(app);

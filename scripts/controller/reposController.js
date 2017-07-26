@@ -4,7 +4,7 @@ var app = app || {};
 
 (function(module){
   module.reposController = function() {
-    module.getRepos(function (repos) {
+    module.requestRepos(function (repos) {
       module.displayRepos(repos);
     });
     $('main section').hide();
