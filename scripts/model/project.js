@@ -29,7 +29,7 @@
       Project.loadAll(JSON.parse(localStorage.rawData));
       Project.all.map(article => $('#articles').append(article.toHtml()));
     } else {
-      $.getJSON('./js/projectData.json').then(
+      $.getJSON('./scripts/data/projectData.json').then(
         function(data) {
           localStorage.rawData = JSON.stringify(data);
           Project.fetchAll();},

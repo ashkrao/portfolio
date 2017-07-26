@@ -26,6 +26,14 @@
         <hr/>
       </article>
     </script>
+    <script type="text/x-handlebars-template" id="repoTemplate">
+      {{#each repos}}
+        <li>
+          <h4>{{this.name}}</h4>
+          <a href="{{this.url}}">{{this.url}}</a>
+        </li>
+      {{/each}}
+    </script>
   </head>
   <body>
     <header class="">
@@ -34,15 +42,15 @@
         <h4 id="bio">Apprentice at Microsoft</h4>
       </section>
       <nav class="nav-main">
-      <div class="icon-menu"></div>
-      <ul>
-        <li class="tab" data-content="articles"><a href="#" class="icon-home"> Home</a></li>
-        <li class="tab" data-content="about"><a href="#" class="icon-address-book"> About</a></li>
-        <li class="tab" data-content="twitter"><a href="#" class="icon-twitter3"> Twitter</a></li>
-        <li class="tab" data-content="github"><a href="#" class="icon-github"> GitHub</a></li>
-      </ul>
-    </nav>
-  </header>
+        <div class="icon-menu"></div>
+        <ul>
+          <li class="tab" data-content="articles"><a href="/" class="icon-home"> Home</a></li>
+          <li class="tab" data-content="about"><a href="/about" class="icon-address-book"> About</a></li>
+          <li class="tab" data-content="twitter"><a href="#" class="icon-twitter3"> Twitter</a></li>
+          <li class="tab" data-content="github"><a href="/repos" class="icon-github"> GitHub</a></li>
+        </ul>
+      </nav>
+    </header>
     <main>
       <section id="articles" class="tab-content">
       </section>
@@ -53,17 +61,21 @@
         Twitter :|
       </section>
       <section id="github" class="tab-content">
-        GitHub >:D
+        <h2>GitHub Repos Page</h2>
+        <ul id="repoList"></ul>
       </section>
-
     </main>
     <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
-    <script type="text/javascript" src="js/model/project.js"></script>
-    <script type="text/javascript" src="js/view/tabView.js"></script>
-    <script src="/scripts/controller/homeController.js"></script>
-    <script src="/scripts/controller/aboutController.js"></script>
-    <script type="text/javascript" src="js/projectData.js"></script>
+    <script src="githubToken.js"></script>
+    <script src="scripts/model/repo.js"></script>
+    <script src="scripts/model/project.js"></script>
+    <script src="scripts/view/reposView.js"></script>
+    <script src="scripts/view/tabView.js"></script>
+    <script src="scripts/controller/homeController.js"></script>
+    <script src="scripts/controller/aboutController.js"></script>
+    <script src="scripts/controller/reposController.js"></script>
+    <script src="scripts/controller/routes.js"></script>
   </body>
 </html>

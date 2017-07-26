@@ -1,0 +1,12 @@
+'use strict';
+
+var app = app || {};
+
+(function (module) {
+  module.displayRepos = function (reposFromModel) {
+    const template = Handlebars.compile($('#repoTemplate').html());
+    $('#repoList').html(template({repos: reposFromModel}))
+  }
+})(app);
+
+//Reference: Demo class 12
