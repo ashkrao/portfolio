@@ -1,6 +1,8 @@
 'use strict';
 
 var app = app || {};
+var consts = require('server.js');
+
 
 (function (module) {
   module.requestRepos = function (callback) {
@@ -8,7 +10,7 @@ var app = app || {};
       url: 'https://api.github.com/user/repos',
       method: 'GET',
       headers: {
-        Authorization: `token ${process.env.GITHUB_TOKEN}`
+        Authorization: `token ${consts.GITHUB_TOKEN}`
       }
     })
     .then(
