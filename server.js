@@ -5,7 +5,8 @@ const bodyParser = require('body-parser');
 const requestProxy = require('express-request-proxy');
 const app = express();
 const PORT = process.env.PORT || 2007;
-exports.GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
