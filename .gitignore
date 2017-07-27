@@ -6,4 +6,4 @@ node_modules
 node_modules/*
 
 # GitHub token
-githubToken.js
+GITHUB_TOKEN.js
