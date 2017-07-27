@@ -5,7 +5,7 @@ var app = app || {};
 (function (module) {
   module.requestRepos = function (callback) {
     $.get({
-      url: 'https://api.github.com/user/repos'
+      url: 'https://api.github.com/${request.params[0]}'
     })
     .then(
       function (data){
