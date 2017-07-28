@@ -6,7 +6,7 @@ var app = app || {};
   module.requestRepos = function (ctx, next) {
     // call GitHub to get my repos
     $.ajax({
-      url: `/github/ashkrao/repos`,
+      url: `/github/user/repos`,
       method: 'GET'
     })
     .then(
