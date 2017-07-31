@@ -1,13 +1,44 @@
+/* Body */
+body {
+  color: #ddd;
+  background-color: rgba(25, 25, 25, .5);
+  background-image: url('../images/body-bg.jpg');
+  text-shadow: 0 0 5px black;
+}
+
+a {
+    color: lightblue;
+    text-decoration: none;
+}
+
 /* Navigation */
+.nav-main {
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.nav-main ul {
+  list-style-type: none;
+}
 
 .nav-main li {
+  font-family: 'Lobster Two', cursive;
+  font-size: 1.4em;
   margin-right: .6em;
   font-size: 1 em;
-  padding: .9em .5em;
-  border-bottom: 1px solid #EEE;
+  padding: 1em 1.5em;
 }
 
 /* Header */
+.page-header {
+  background: rgba(25, 25, 25, .5);
+}
+
+.intro {
+  padding: 25px;
+  text-align: center;
+}
+
 #name {
   font-family: 'Lobster Two', cursive;
   font-size: 30px;
@@ -18,4 +49,18 @@
   font-family: 'Lobster Two', cursive;
   font-size: 15px;
   padding-bottom: 20px;
-  }
+}
+#photo-wrapper {
+  text-align: center;
+}
+#photo-div {
+  display: inline-block;
+}
+#portrait {
+  border: 2px solid #a1a1a1;
+  border-radius: 50%;
+  max-width: 250px;
+  height: auto;
+  filter: grayscale(100%);
+  margin-top: 40px;
+}

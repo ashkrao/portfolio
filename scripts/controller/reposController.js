@@ -3,13 +3,16 @@
 var app = app || {};
 
 (function(module){
-  module.reposController = function() {
-    module.requestRepos(function (repos) {
-      module.displayRepos(repos);
-    });
+  let reposController = {};
+
+  reposController.index = function(ctx, next) {
+    $('#repoList').empty();
     $('main section').hide();
+    module.displayRepos(ctx.repos);
     $('#github').show();
+    next();
   }
+  module.reposController = reposController;
 })(app);
 
-//Reference: Demo class 12
+//Reference: Demo class 14

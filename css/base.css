@@ -14,6 +14,7 @@
   content: "\e9bd";
   float: right;
   font-size: 30px;
+  padding-right: 20px;
   }
 
 .icon-home:before {

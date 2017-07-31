@@ -36,4 +36,4 @@
         function(){console.error('File not found');})
     }
   }
-})();
+})(app);

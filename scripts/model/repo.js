@@ -3,21 +3,21 @@
 var app = app || {};
 
 (function (module) {
-  module.requestRepos = function (callback) {
-    $.get({
-      url: `https://api.github.com/${request.params[0]}`
+  module.requestRepos = function (ctx, next) {
+    // call GitHub to get my repos
+    $.ajax({
+      url: `/github/user/repos`,
+      method: 'GET'
     })
     .then(
-      function (data){
+      function (data) {
         let mappedData = data.map(repo =>({
           name: repo.name,
           url: repo.html_url
         }));
-        console.log(mappedData);
-        callback(mappedData);
+        ctx.repos = mappedData;
+        next();
       }
     );
   };
 })(app);
-
-//Reference: Demo class 12

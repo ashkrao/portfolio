@@ -7,19 +7,25 @@ const app = express();
 const PORT = process.env.PORT || 2007;
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(express.static('.'));
 
-function proxyGitHub(request, response) {
-  (requestProxy({
-    url: `https://api.github.com/${request.params[0]}`,
-    headers: {Authorization: `token ${GITHUB_TOKEN}`}
-  }))(request, response);
-}
-app.get('/repos', proxyGitHub);
+app.get('/github/*', function (request, response) {
+  (
+    requestProxy({
+      url: `https://api.github.com/${request.params[0]}`,
+      headers: {
+        Authorization: `token ${GITHUB_TOKEN}`
+      }
+    })
+  )(request, response);
+})
+
+app.get('/*', function (req, res) {
+  res.sendFile('index.html', {root: './'});
+});
 
 app.listen(PORT, function() {
   console.log('Started Node.js server on port ' + PORT);
