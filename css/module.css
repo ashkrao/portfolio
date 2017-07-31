@@ -1,8 +1,9 @@
 /* Body */
 body {
-  color: #eee;
-  background-color: #444;
+  color: #ddd;
+  background-color: rgba(25, 25, 25, .5);
   background-image: url('../images/body-bg.jpg');
+  text-shadow: 0 0 5px black;
 }
 
 a {
