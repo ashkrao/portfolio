@@ -1,6 +1,6 @@
 /* Navigation for larger screens */
 @media (min-width:700px) {
-  nav .icon-menu {
+  #hamburger {
      display:none;
   }
   .nav-main ul {

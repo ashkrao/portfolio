@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
     <title>Portfolio</title>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css"  href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet">
-    <link rel="stylesheet" href="css/cssreset.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/state.css">
@@ -36,14 +36,13 @@
     </script>
   </head>
   <body>
-    <header class="">
-      <section class="">
-        <h1 id="name">Hi, I'm Ashwini!</h1>
-        <h4 id="bio">Apprentice at Microsoft</h4>
+    <header class="page-header">
+      <section class="intro">
+        <h1 id="name">Ashwini's Portfolio</h1>
       </section>
       <nav class="nav-main">
-        <div class="icon-menu"></div>
-        <ul>
+        <div id="hamburger" class="icon-menu"></div>
+        <ul id="nav-menu" class="nav-ul">
           <li class="tab" data-content="articles"><a href="/" class="icon-home"> Home</a></li>
           <li class="tab" data-content="about"><a href="/about" class="icon-address-book"> About</a></li>
           <li class="tab" data-content="twitter"><a href="#" class="icon-twitter3"> Twitter</a></li>
@@ -55,7 +54,7 @@
       <section id="articles" class="tab-content">
       </section>
       <section id="about" class="tab-content">
-        About me :)
+        <h4 id="bio">Apprentice at Microsoft</h4>
       </section>
       <section id="twitter" class="tab-content">
         Twitter :|

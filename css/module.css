@@ -1,5 +1,15 @@
-/* Navigation */
+/* Body */
+body {
+  color: #eee;
+  background-color: #444;
+}
 
+a {
+    color: lightblue;
+    text-decoration: none;
+}
+
+/* Navigation */
 .nav-main li {
   margin-right: .6em;
   font-size: 1 em;
@@ -8,6 +18,15 @@
 }
 
 /* Header */
+.page-header {
+  background-image: url('../images/banner.jpg');
+  background-position: center;
+}
+
+.intro {
+  padding: 40px;
+}
+
 #name {
   font-family: 'Lobster Two', cursive;
   font-size: 30px;
