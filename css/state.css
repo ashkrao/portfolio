@@ -1,6 +1,6 @@
 /* Navigation for larger screens */
 @media (min-width:700px) {
-  #hamburger {
+  .icon-menu {
      display:none;
   }
   .nav-main ul {
@@ -10,5 +10,15 @@
      display:inline;
      padding: 0 5%;
      border-bottom: none;
+  }
+}
+
+@media (max-width:699px) {
+  #nav-menu {
+    display: none;
+  }
+
+  .nav-main:hover #nav-menu {
+    display: block;
   }
 }
