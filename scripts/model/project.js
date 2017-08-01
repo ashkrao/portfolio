@@ -27,7 +27,7 @@
   Project.fetchAll = function() {
     if (localStorage.rawData) {
       Project.loadAll(JSON.parse(localStorage.rawData));
-      Project.all.map(article => $('#articles').append(article.toHtml()));
+      Project.all.map(article => $('#about').append(article.toHtml()));
     } else {
       $.getJSON('./scripts/data/projectData.json').then(
         function(data) {
@@ -36,4 +36,8 @@
         function(){console.error('File not found');})
     }
   }
+
+  $( document ).ready(function() {
+    Project.fetchAll();
+  });
 })(app);

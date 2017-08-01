@@ -1,29 +1,29 @@
 [
   {
     "category":    "Android",
-    "title":       "",
+    "title":       "Ameego",
     "duration":    "3 months",
-    "description": "coming soon",
-    "technologies":"Java",
+    "description": "Secure instant messaging app based on Telegram API",
+    "technologies":"Java"
   },
   {
     "category":    "iPhone",
-    "title":       "",
+    "title":       "Naturally Slim",
     "duration":    "1 month",
-    "description": "coming soon",
-    "technologies":"Swift",
+    "description": "Food and drink diary to track intake",
+    "technologies":"Swift"
   },
   { "category":    "Website",
-    "title":       "",
+    "title":       "Kal Academy",
     "duration":    "2 months",
-    "description": "coming soon",
-    "technologies":"HTML, CSS, JavaScript",
+    "description": "Displayed course information and added payment gateway",
+    "technologies":"HTML, CSS, JavaScript, ASP.NET"
   },
   {
     "category":    "Android",
-    "title":       "",
+    "title":       "Marble Madness",
     "duration":    "3 months",
-    "description": "coming soon",
-    "technologies":"Java",
+    "description": "Marble shooting game",
+    "technologies":"Java"
   }
 ]
